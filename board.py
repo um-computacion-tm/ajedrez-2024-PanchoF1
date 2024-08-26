@@ -21,6 +21,10 @@ class Board:
         self.__positions__[0][6] = Knight("WHITE") 
         self.__positions__[0][7] = Rook("WHITE") 
 
+        for col in range(8):
+            self.__positions__[1][col] = Pawn("WHITE")
+            self.__positions__[6][col] = Pawn("BLACK")
+
         self.__positions__[7][0] = Rook("BLACK") # black posiciones
         self.__positions__[7][1] = Knight("BLACK") 
         self.__positions__[7][2] = Bishop("BLACK") 
