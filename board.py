@@ -20,7 +20,16 @@ class Board:
         self.__positions__[0][5] = Bishop("WHITE") 
         self.__positions__[0][6] = Knight("WHITE") 
         self.__positions__[0][7] = Rook("WHITE") 
-        
+
+        self.__positions__[7][0] = Rook("BLACK") # black posiciones
+        self.__positions__[7][1] = Knight("BLACK") 
+        self.__positions__[7][2] = Bishop("BLACK") 
+        self.__positions__[7][3] = King("BLACK") 
+        self.__positions__[7][4] = Queen("BLACK")         
+        self.__positions__[7][5] = Bishop("BLACK") 
+        self.__positions__[7][6] = Knight("BLACK") 
+        self.__positions__[7][7] = Rook("BLACK")
+
     def __str__(self):
         board_str = ""
         for row in self.__positions__:
