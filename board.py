@@ -3,6 +3,7 @@ from king import King
 from knight import Knight
 from queen import Queen
 from bishop import Bishop
+from pawn import Pawn
 
 class Board:
     def __init__(self):
@@ -20,6 +21,10 @@ class Board:
         self.__positions__[0][5] = Bishop("WHITE") 
         self.__positions__[0][6] = Knight("WHITE") 
         self.__positions__[0][7] = Rook("WHITE") 
+
+        for col in range(8):
+            self.__positions__[1][col] = Pawn("WHITE")
+            self.__positions__[6][col] = Pawn("BLACK")
 
         self.__positions__[7][0] = Rook("BLACK") # black posiciones
         self.__positions__[7][1] = Knight("BLACK") 
