@@ -26,7 +26,21 @@ class TestBoard(unittest.TestCase):
         piece = self.board.get_piece(0, 4)
         self.assertIsInstance(piece, Queen)
 
-
+    def test_str_board(self):
+        board = Board()
+        self.assertNotEqual(
+            str(board),
+            (
+                "♖      ♖\n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "        \n"
+                "♜      ♜\n"
+            )
+        )
 
 if __name__ == '__main__':
     unittest.main()
