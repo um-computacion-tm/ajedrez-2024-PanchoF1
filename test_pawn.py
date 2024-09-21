@@ -25,5 +25,16 @@ class TestPawn(unittest.TestCase):
             possibles,
             [(3, 5)]
         )
+
+    def test_eat_left_black(self):
+        board = Board(for_test = True)
+        pawn = Pawn("BLACK", board)
+        board.set_piece(3, 6, Pawn("WHITE", board))
+
+        possibles = pawn.get_possible_positions(2, 5)
+        self.assertEqual(
+            possibles,
+            [(3, 5), (3, 6)]
+        )        
 if __name__ == '__main__':
     unittest.main()        
