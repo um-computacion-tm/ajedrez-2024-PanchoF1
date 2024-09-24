@@ -46,6 +46,27 @@ class TestPawn(unittest.TestCase):
             possibles,
             [(5, 4), (4, 4)]
         )
-                       
+
+    def test_not_initial_white(self):
+        board = Board(for_test = True)
+        pawn = Pawn("WHITE", board)
+
+        possibles = pawn.get_possible_positions(5, 4)
+        self.assertEqual(
+            possibles,
+            [(4, 4)]
+        )
+
+    def test_not_initial_white_block(self):
+        board = Board(for_test = True)
+        pawn = Pawn("WHITE", board)
+        board.set_piece(4, 4, Pawn("BLACK", board))
+
+        possibles = pawn.get_possible_positions(5, 4)
+        self.assertEqual(
+            possibles,
+            []
+        )
+                               
 if __name__ == '__main__':
     unittest.main()
