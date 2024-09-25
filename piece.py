@@ -10,4 +10,14 @@ class Piece:
             return self.black_str
 
     def get_color(self):
-        return self.__color__        
+        return self.__color__               
+    
+    def valid_positions(
+        self,
+        from_row,
+        from_col,
+        to_row,
+        to_col,
+    ):
+        possible_positions = self.get_possible_positions(from_row, from_col)
+        return (to_row, to_col) in possible_positions    
