@@ -24,3 +24,9 @@ class Piece:
 
     def possible_diagonal_positions(self, from_row, from_col):
         return ()    
+
+    def possible_orthogonal_positions(self, from_row, from_col):
+        return (
+            self.possible_positions_vd(from_row, from_col) +
+            self.possible_positions_va(from_row, from_col)
+        )    
