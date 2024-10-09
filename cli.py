@@ -1,4 +1,5 @@
 from chess import Chess
+from exceptions import InvalidMove, InvalidTurn, EmptyPosition
 
 
 def main():
