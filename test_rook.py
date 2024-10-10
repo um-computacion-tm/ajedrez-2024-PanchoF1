@@ -1,6 +1,7 @@
 import unittest
 from rook import Rook
 from board import Board
+from pawn import Pawn
 
 class TestRook(unittest.TestCase):
 
